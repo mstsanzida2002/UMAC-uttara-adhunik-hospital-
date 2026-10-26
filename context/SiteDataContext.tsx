@@ -198,7 +198,9 @@ export function useSiteImages(fallbacks: ImageMap = {}) {
       .then((data) => {
         const fresh: ImageMap = { ...DEFAULT_IMAGES, ...fallbacks };
         for (const item of data.images || []) {
-          if (item.key && item.url) fresh[item.key] = item.url;
+          if (item.key && item.url) {
+            fresh[item.key] = item.url;
+          }
         }
         setImages(fresh);
       })

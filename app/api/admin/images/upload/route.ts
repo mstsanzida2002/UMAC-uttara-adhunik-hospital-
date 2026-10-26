@@ -59,6 +59,36 @@ export async function POST(req: NextRequest) {
         await mkdir(path.dirname(originalPath), { recursive: true });
         await writeFile(originalPath, buffer);
       }
+
+      const originalPaths: Record<string, string> = {
+        "hero-bg": "images/hero-bg.jpg",
+        "about-1": "images/about-1.jpg",
+        "about-2": "images/about-2.jpg",
+        "about-banner": "images/about-banner.jpg",
+        "principal-photo": "images/principal-photo.jpg",
+        "principal-signature": "images/principal-signature.png",
+        "facility-hostel": "images/facility-hostel.jpg",
+        "finddept-bg": "images/finddept-bg.jpg",
+        "finddept-doctor": "images/finddept-doctor.jpg",
+        "finddept-student1": "images/finddept-student1.jpg",
+        "finddept-student2": "images/finddept-student2.jpg",
+        "admission-bg": "images/admission-bg.jpg",
+        "admission-aid-bg": "images/admission-aid-bg.jpg",
+        "metrics-bg": "images/metrics-bg.jpg",
+        "sustainability-1": "images/sustainability-1.jpg",
+        "sustainability-2": "images/sustainability-2.jpg",
+        "visit-uamc-bg": "images/visit-uamc-bg.jpg",
+        "footer-post-1": "images/footer-post-1.webp",
+        "footer-post-2": "images/footer-post-2.webp",
+        "logo": "images/uamc-logo-round.png",
+        "college-emblem": "assets/college-emblem.png",
+      };
+      const originalRelativePath = originalPaths[key];
+      if (originalRelativePath) {
+        const originalPath = path.join(process.cwd(), "public", originalRelativePath);
+        await mkdir(path.dirname(originalPath), { recursive: true });
+        await writeFile(originalPath, buffer);
+      }
     }
 
     if (process.env.NODE_ENV !== "production") {
