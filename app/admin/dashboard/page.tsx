@@ -359,7 +359,7 @@ export default function AdminDashboardPage() {
         {/* Global Admin Footer */}
         <footer className="px-8 py-4 bg-white/50 border-t border-emerald-100/80 text-center text-xs text-gray-500">
           System engineered by{' '}
-          <span className="font-semibold text-gray-700">Sakin Bin Jabed with Mst. Sanzida</span>
+          <span className="font-semibold text-gray-700">Mst. Sanzida</span>
         </footer>
       </main>
     </div>

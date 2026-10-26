@@ -54,7 +54,7 @@ export default function AdminAdmissionsPlaceholderPage() {
       <footer className="w-full pb-6 text-center">
         <p className="text-xs sm:text-sm text-gray-500 font-medium tracking-normal">
           System engineered by{' '}
-          <span className="font-semibold text-gray-700">Sakin Bin Jabed with Mst. Sanzida</span>
+          <span className="font-semibold text-gray-700">Mst. Sanzida</span>
         </p>
       </footer>
     </div>
