@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
     // Disable optimizer cache TTL so replaced images show immediately
     minimumCacheTTL: 0,
   },
+  outputFileTracingIncludes: {
+    "/*": ["./prisma/dev.db"],
+  },
   turbopack: {
     rules: {
       "*.css": {
