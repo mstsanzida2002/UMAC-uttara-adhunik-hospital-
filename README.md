@@ -75,6 +75,8 @@ npm run build
 npm run start
 ```
 
+Production image uploads use Vercel Blob storage. Add a Blob store to the Vercel project and configure the generated `BLOB_READ_WRITE_TOKEN` environment variable for Production and Preview deployments before using **Manage Images**.
+
 ---
 
 ## 📁 Project Architecture
