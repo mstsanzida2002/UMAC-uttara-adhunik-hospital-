@@ -50,5 +50,3 @@ career_node.json
 
 # Database
 !prisma/dev.db
-*.db-journal
-
