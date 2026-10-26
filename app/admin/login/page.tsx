@@ -19,14 +19,15 @@ export default function AdminLoginPage() {
 
     // Specific credentials check as requested
     const validCredentials = [
-      { email: 'sakin5140@gmail.com', password: 'Sakin106' },
-      { email: 'sanzida@gmail.com', password: '123admin' },
+      { email: 'sakin5140@gmail.com', password: 'Sakin106', name: 'Sakin' },
+      { email: 'sanzida@gmail.com', password: '123admin', name: 'Mst. Sanzida' },
     ];
     const match = validCredentials.find(c => c.email === email && c.password === password);
     if (match) {
       setIsLoading(true);
       // Persist auth cookie for session verification across admin routes
       document.cookie = `admin_auth=${match.email}; path=/; max-age=86400; SameSite=Lax`;
+      document.cookie = `admin_name=${encodeURIComponent(match.name)}; path=/; max-age=86400; SameSite=Lax`;
       router.push('/admin/dashboard');
     } else {
       setError('Invalid email or password');

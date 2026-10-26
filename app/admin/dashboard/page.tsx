@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -15,7 +18,31 @@ import {
   PenLine,
 } from 'lucide-react';
 
+type AdminProfile = {
+  name: string;
+  email: string;
+};
+
+function getCookie(name: string) {
+  return document.cookie
+    .split('; ')
+    .find((cookie) => cookie.startsWith(`${name}=`))
+    ?.slice(name.length + 1);
+}
+
 export default function AdminDashboardPage() {
+  const [admin, setAdmin] = useState<AdminProfile>({
+    name: 'Admin',
+    email: '',
+  });
+
+  useEffect(() => {
+    const email = decodeURIComponent(getCookie('admin_auth') || '');
+    const storedName = decodeURIComponent(getCookie('admin_name') || '');
+    const name = storedName || (email === 'sakin5140@gmail.com' ? 'Sakin' : email === 'sanzida@gmail.com' ? 'Mst. Sanzida' : 'Admin');
+    setAdmin({ name, email });
+  }, []);
+
   const summaryCards = [
     {
       title: 'Active Notices',
@@ -171,20 +198,24 @@ export default function AdminDashboardPage() {
         <div className="p-4 border-t border-gray-100 space-y-3">
           <div className="p-3 bg-emerald-50/60 rounded-xl flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-[#018837] text-white font-bold flex items-center justify-center text-sm shadow-sm">
-              S
+              {admin.name.charAt(0).toUpperCase()}
             </div>
             <div className="min-w-0 flex-1">
               <div className="text-sm font-semibold text-gray-900 truncate">
-                Sakin
+                {admin.name}
               </div>
               <div className="text-xs text-gray-500 truncate">
-                sakin5140@gmail.com
+                {admin.email}
               </div>
             </div>
           </div>
 
           <Link
             href="/admin/login"
+            onClick={() => {
+              document.cookie = 'admin_auth=; path=/; max-age=0';
+              document.cookie = 'admin_name=; path=/; max-age=0';
+            }}
             className="flex items-center justify-center gap-2 w-full px-3 py-2 text-xs font-semibold text-red-600 hover:bg-red-50 rounded-lg transition-colors"
           >
             <LogOut className="w-3.5 h-3.5" />
@@ -199,7 +230,7 @@ export default function AdminDashboardPage() {
         <header className="bg-white/80 backdrop-blur-md border-b border-emerald-100/80 px-6 sm:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sticky top-0 z-10 shadow-sm">
           <div>
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight font-serif">
-              Welcome, Sakin
+              Welcome, {admin.name}
             </h1>
             <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
               Uttara Adhunik Medical College Management Panel
