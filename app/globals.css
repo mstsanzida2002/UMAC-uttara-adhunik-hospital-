@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/*
+ * Uttara Adunik Medical College — global stylesheet
+ * Tailwind v4 CSS-first configuration with Figma design tokens.
+ */
+
+:root {
+  --background: #ffffff;
+  --foreground: #262626;
+}
+
+@theme {
+  --color-brand-green: #018837;
+  --color-brand-green-dark: #016f2c;
+  --color-brand-green-light: #e6f4ec;
+  --color-brand-gold: #FECD2F;
+  --color-brand-gold-hover: #e5b927;
+  --color-brand-dark: #1F1F25;
+  --color-brand-card: #282830;
+  --color-brand-muted: #737477;
+  --color-brand-border: #E8E8F4;
+
+  --font-bitter: var(--font-bitter), serif;
+  --font-inter: var(--font-inter), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}

@@ -1,0 +1,82 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Notice {
+  id          String   @id @default(cuid())
+  title       String
+  category    String   @default("General") // General, Academic, Admission, Event
+  date        String
+  content     String   @default("")
+  isImportant Boolean  @default(false)
+  fileUrl     String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Department {
+  id          String   @id @default(cuid())
+  name        String
+  slug        String   @unique
+  description String
+  headName    String
+  headTitle   String
+  headImage   String?
+  content     String   @default("")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model GalleryItem {
+  id        String   @id @default(cuid())
+  title     String
+  category  String   @default("Campus") // Campus, Hospital, Events, Academic
+  imageUrl  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model AdmissionInfo {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  content     String
+  downloadUrl String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SiteImage {
+  id        String   @id @default(cuid())
+  key       String   @unique  // e.g. "hero-bg", "principal-photo", "about-1"
+  label     String            // Human-readable name shown in admin
+  category  String   @default("General") // Hero, About, Principal, Facilities, Gallery, Footer
+  url       String            // Path to the image, e.g. /uploads/hero-bg.jpg
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteContent {
+  id        String   @id @default(cuid())
+  key       String   @unique  // e.g. "about.tagline", "metrics.stat1.value"
+  label     String            // Human-readable label for admin UI
+  value     String            // The actual text content
+  section   String   @default("General") // About, Hero, Metrics, Facilities, College, Contact
+  type      String   @default("text")    // text | textarea | number
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

@@ -1,0 +1,2158 @@
+{
+  "19:2538": {
+    "name": "Notice Board",
+    "box": {
+      "x": -2762,
+      "y": 1350.22509765625,
+      "width": 1600,
+      "height": 979
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Notice Board",
+        "fontSize": 50,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "View All ",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "General Notice",
+        "fontSize": 15,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Admission Notice",
+        "fontSize": 15,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Reports",
+        "fontSize": 15,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Job Circular ",
+        "fontSize": 15,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Publication",
+        "fontSize": 50,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "View All ",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Journal",
+        "fontSize": 15,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Tenders",
+        "fontSize": 15,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "12",
+        "fontSize": 25,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "Mar 25",
+        "fontSize": 18.75,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "\"BCPS e-Logbook: Modernizing the Monitoring of FCPS 1st\rPhase Training\"",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      },
+      {
+        "text": "3.40 PM",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0.2666666805744171,
+          "g": 0.2666666805744171,
+          "b": 0.2666666805744171,
+          "a": 1
+        }
+      }
+    ]
+  },
+  "13:1134": {
+    "name": "About UAMC",
+    "box": {
+      "x": -2762,
+      "y": 2329.22509765625,
+      "width": 1600,
+      "height": 817.5609130859375
+    },
+    "fills": [],
+    "texts": [
+      {
+        "text": "knowledge meets innovation",
+        "fontSize": 19.499820709228516,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "About UAMC",
+        "fontSize": 64.99940490722656,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.14901961386203766,
+          "g": 0.14901961386203766,
+          "b": 0.14901961386203766,
+          "a": 1
+        }
+      },
+      {
+        "text": "Uttara Adhunik Medical College (UAMC) is a prestigious medical institution located in Uttara Model Town, Dhaka, Bangladesh. Established in 2003.",
+        "fontSize": 17.333173751831055,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "UAMC offers a Bachelor of Medicine and Bachelor of Surgery (MBBS) program, designed to equip students with the knowledge, skills, and hands-on clinical training needed to excel in the medical profession.",
+        "fontSize": 17.333173751831055,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "College Mission",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Statement",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "College Vision",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Achievement",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "View Our Program",
+        "fontSize": 17.333173751831055,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ]
+  },
+  "13:1253": {
+    "name": "ADD",
+    "box": {
+      "x": -2762,
+      "y": 3146.7861328125,
+      "width": 1600,
+      "height": 311
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "IMAGE",
+        "scaleMode": "FILL",
+        "imageRef": "1cfa5d2268bdb8404957da672487eace75a3df97"
+      },
+      {
+        "opacity": 0.4000000059604645,
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "90%",
+        "fontSize": 48,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Post-Graduation\nSuccess Rate",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.9960784316062927,
+          "g": 0.8039215803146362,
+          "b": 0.18431372940540314,
+          "a": 1
+        }
+      },
+      {
+        "text": "Top 10",
+        "fontSize": 48,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Colleges That\nCreate Futures",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.9960784316062927,
+          "g": 0.8039215803146362,
+          "b": 0.18431372940540314,
+          "a": 1
+        }
+      },
+      {
+        "text": "No. 1",
+        "fontSize": 48,
+        "fontName": "Bitter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "In The Nation For\nMaterials R&D",
+        "fontSize": 18,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.9960784316062927,
+          "g": 0.8039215803146362,
+          "b": 0.18431372940540314,
+          "a": 1
+        }
+      }
+    ]
+  },
+  "19:1784": {
+    "name": "Find Department",
+    "box": {
+      "x": -2762,
+      "y": 3457.7861328125,
+      "width": 1600,
+      "height": 656.849609375
+    },
+    "fills": [
+      {
+        "opacity": 0.5,
+        "blendMode": "NORMAL",
+        "type": "IMAGE",
+        "scaleMode": "FILL",
+        "imageRef": "f6d95559454f7a96fd6df30bce0670856dc1ef18"
+      },
+      {
+        "blendMode": "NORMAL",
+        "type": "GRADIENT_LINEAR",
+        "gradientHandlePositions": [
+          {
+            "x": 0.5,
+            "y": -3.0616171314629196e-17
+          },
+          {
+            "x": 0.5,
+            "y": 0.9999999999999999
+          },
+          {
+            "x": 0,
+            "y": 0
+          }
+        ],
+        "gradientStops": [
+          {
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            },
+            "position": 0
+          },
+          {
+            "color": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 0
+            },
+            "position": 1
+          }
+        ]
+      }
+    ],
+    "texts": [
+      {
+        "text": "Find Your Department",
+        "fontSize": 40,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Use the search bar below to explore our comprehensive MBBS program and discover the perfect path to kickstart your medical career. Join UAMC and embark on a journey of academic excellence, hands-on clinical training, and cutting-edge medical research!",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Find your program like \"Department of Phycology\"",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.5686274766921997,
+          "g": 0.5686274766921997,
+          "b": 0.6509804129600525,
+          "a": 1
+        }
+      },
+      {
+        "text": "Popular Search: Department of Microbiology Department of Community Medicine Department of Pathology",
+        "fontSize": 15,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Popular Program",
+        "fontSize": 11,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Department of Microbiology",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "28+",
+        "fontSize": 36.15702438354492,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Department Available For\nStudent",
+        "fontSize": 14.462809562683105,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ]
+  },
+  "19:1872": {
+    "name": "Addmission",
+    "box": {
+      "x": -2762,
+      "y": 4114.6357421875,
+      "width": 1600,
+      "height": 443
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "IMAGE",
+        "scaleMode": "FILL",
+        "imageRef": "7618134ba6d9b3fcec92351fecc0c08813168f13"
+      },
+      {
+        "opacity": 0.4000000059604645,
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "UAMC Admission",
+        "fontSize": 60,
+        "fontName": "Canela Trial",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Uttara Adhunik Medical College (UAMC) was established in 2003 with a vision to provide quality medical education and healthcare services. Founded through the dedicated efforts of medical professionals and social leaders, UAMC is committed to training future doctors while ensuring affordable healthcare for the community.",
+        "fontSize": 18,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Learn More",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ]
+  },
+  "69:2871": {
+    "name": "Our Facilites",
+    "box": {
+      "x": -2762,
+      "y": 4557.6357421875,
+      "width": 1600,
+      "height": 1169.0166015625
+    },
+    "fills": [],
+    "texts": [
+      {
+        "text": "knowledge meets innovation",
+        "fontSize": 19.499820709228516,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Our Facilities",
+        "fontSize": 60,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Hostel",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Laboratory",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Hospital Service\r",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Cafeteria",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Training",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Medical Education Unit\r",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Departments\r",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Publications",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Seminar",
+        "fontSize": 18.717504501342773,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      },
+      {
+        "text": "Hostel Facilities",
+        "fontSize": 38.37953186035156,
+        "fontName": "Bitter",
+        "fontWeight": 700,
+        "color": {
+          "r": 0.003921568859368563,
+          "g": 0.5333333611488342,
+          "b": 0.21568627655506134,
+          "a": 1
+        }
+      },
+      {
+        "text": "Ladies hostel:",
+        "fontSize": 19.18976593017578,
+        "fontName": "Bitter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.29019609093666077,
+          "g": 0.29019609093666077,
+          "b": 0.29019609093666077,
+          "a": 1
+        }
+      },
+      {
+        "text": "Hostel accommodations for female students are available with limited number of seats.",
+        "fontSize": 19.18976593017578,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.29019609093666077,
+          "g": 0.29019609093666077,
+          "b": 0.29019609093666077,
+          "a": 1
+        }
+      },
+      {
+        "text": "View Details",
+        "fontSize": 11.00728988647461,
+        "fontName": "Inter",
+        "fontWeight": 600,
+        "color": {
+          "r": 0,
+          "g": 0.578666627407074,
+          "b": 0.8266667127609253,
+          "a": 1
+        }
+      },
+      {
+        "text": "View Our Program",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ]
+  },
+  "24:3629": {
+    "name": "Footer",
+    "box": {
+      "x": -2762,
+      "y": 9663.3154296875,
+      "width": 1600,
+      "height": 630.3599853515625
+    },
+    "fills": [
+      {
+        "blendMode": "NORMAL",
+        "type": "SOLID",
+        "color": {
+          "r": 0,
+          "g": 0,
+          "b": 0,
+          "a": 1
+        }
+      }
+    ],
+    "texts": [
+      {
+        "text": "Subscribe To Newsletter",
+        "fontSize": 30.9375,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Enter Your mail ",
+        "fontSize": 14,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Submit Button ",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 0.06666667014360428,
+          "g": 0.0470588244497776,
+          "b": 0.1764705926179886,
+          "a": 1
+        }
+      },
+      {
+        "text": "We are passionate education dedicated to\nproviding high-quality resources learners all\nbackgrounds.",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Park, Melbourne, Australia",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "485-826-710",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Our Campus",
+        "fontSize": 20,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Academic",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Athletics",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Campus life",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Research",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Academic Area",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Our Pages",
+        "fontSize": 20,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "About",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Tution Fee",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Alumni",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Faculty Staff",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Event",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Recent Posts",
+        "fontSize": 20,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "August 6, 2024",
+        "fontSize": 14,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Those inequalities are inequalities",
+        "fontSize": 15.75,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "that",
+        "fontSize": 17.15625,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "July 4, 2024",
+        "fontSize": 14,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "After Decades Of Improvement,",
+        "fontSize": 15.75,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Cardiovascular",
+        "fontSize": 16.03125,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Uttara Adhunik\nMedical College (UAMC)",
+        "fontSize": 14.900662422180176,
+        "fontName": "Inter",
+        "fontWeight": 500,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      },
+      {
+        "text": "Copyright @ 2024. All Rights  Reserved by ",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 0.45098039507865906,
+          "g": 0.45490196347236633,
+          "b": 0.46666666865348816,
+          "a": 1
+        }
+      },
+      {
+        "text": "Unipix",
+        "fontSize": 16,
+        "fontName": "Inter",
+        "fontWeight": 400,
+        "color": {
+          "r": 1,
+          "g": 1,
+          "b": 1,
+          "a": 1
+        }
+      }
+    ]
+  }
+}
