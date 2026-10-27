@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {
   LayoutDashboard,
+  FileText,
   Bell,
   GraduationCap,
   Briefcase,
@@ -111,6 +112,7 @@ export default function AdminImagesPage() {
           <nav className="p-4 space-y-1.5">
             {[
               { href: '/admin/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
+              { href: '/admin/content', icon: FileText, label: 'Site Content' },
               { href: '/admin/images', icon: ImageIcon, label: 'Manage Images', active: true },
               { href: '/admin/notices', icon: Bell, label: 'Manage Notices' },
               { href: '/admin/admissions', icon: GraduationCap, label: 'Manage Admissions' },

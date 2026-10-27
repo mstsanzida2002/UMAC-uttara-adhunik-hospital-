@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, Briefcase, CheckCircle2, Pencil, Plus, Trash2, X } from 'lucide-react';
+import AdminSidebar from '@/components/admin/AdminSidebar';
 
 type Job = {
   id: string;
@@ -73,7 +74,9 @@ export default function AdminJobsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#E6F4EB] text-gray-800">
+    <div className="min-h-screen bg-[#E6F4EB] flex flex-col md:flex-row text-gray-800">
+      <AdminSidebar active="jobs" />
+      <div className="flex-1 min-w-0">
       <header className="bg-white border-b border-emerald-100 px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3"><Image src="/assets/college-emblem.png" alt="UAMC" width={44} height={44} /><div><h1 className="font-bold text-gray-900">Manage Jobs</h1><p className="text-xs text-[#018837]">Publish career opportunities to the client site</p></div></div>
         <Link href="/admin/dashboard" className="flex items-center gap-2 text-sm font-semibold text-[#018837]"><ArrowLeft className="w-4 h-4" />Dashboard</Link>
@@ -95,6 +98,7 @@ export default function AdminJobsPage() {
         <section className="bg-white rounded-2xl border border-emerald-100 shadow-sm overflow-hidden"><div className="px-5 py-4 border-b font-bold">Job postings</div>{loading ? <p className="p-5 text-gray-500">Loading...</p> : jobs.length === 0 ? <p className="p-5 text-gray-500">No job postings yet.</p> : <div className="divide-y">{jobs.map(job => <div key={job.id} className="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3"><div><div className="flex items-center gap-2"><span className="text-xs px-2 py-1 rounded-full bg-emerald-50 text-[#018837]">{job.type}</span><span className={`text-xs ${job.isPublished ? 'text-emerald-600' : 'text-gray-500'}`}>{job.isPublished ? 'Published' : 'Hidden'}</span></div><h3 className="font-semibold mt-2">{job.title}</h3><p className="text-sm text-gray-500">{job.department} · Due: {job.deadline}</p></div><div className="flex gap-2"><button onClick={() => edit(job)} className="p-2 rounded-lg bg-emerald-50 text-[#018837]" aria-label="Edit job"><Pencil className="w-4 h-4" /></button><button onClick={() => remove(job.id)} className="p-2 rounded-lg bg-red-50 text-red-600" aria-label="Delete job"><Trash2 className="w-4 h-4" /></button></div></div>)}</div>}</section>
       </main>
       <footer className="text-center py-6 text-sm text-gray-500">System engineered by <span className="font-semibold text-gray-700">Mst. Sanzida</span></footer>
+      </div>
     </div>
   );
 }

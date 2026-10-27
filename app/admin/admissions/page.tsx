@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle2, GraduationCap, Pencil, Plus, Trash2, X } from 'lucide-react';
+import AdminSidebar from '@/components/admin/AdminSidebar';
 
 type AdmissionInfo = {
   id: string;
@@ -73,7 +74,9 @@ export default function AdminAdmissionsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#E6F4EB] text-gray-800">
+    <div className="min-h-screen bg-[#E6F4EB] flex flex-col md:flex-row text-gray-800">
+      <AdminSidebar active="admissions" />
+      <div className="flex-1 min-w-0">
       <header className="bg-white border-b border-emerald-100 px-5 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Image src="/assets/college-emblem.png" alt="UAMC" width={44} height={44} />
@@ -99,6 +102,7 @@ export default function AdminAdmissionsPage() {
         </section>
       </main>
       <footer className="text-center py-6 text-sm text-gray-500">System engineered by <span className="font-semibold text-gray-700">Mst. Sanzida</span></footer>
+      </div>
     </div>
   );
 }
