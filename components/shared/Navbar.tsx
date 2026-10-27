@@ -82,6 +82,7 @@ export default function Navbar() {
   const [mobileExpandedItem, setMobileExpandedItem] = useState<string | null>(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isScrolled, setIsScrolled] = useState(false);
   const dropdownTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (name: string) => {
@@ -103,6 +104,13 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   // Close menus on route change
   useEffect(() => {
     setActiveDropdown(null);
@@ -112,7 +120,11 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       {/* 1. TOP UTILITY BAR (matching Figma Frame 31 / Frame 5) - Strictly isolated */}
-      <div className="w-full bg-[#FCFBFB] border-b border-neutral-200 text-[#444444] text-[12px] font-medium hidden md:block">
+      <div
+        className={`w-full overflow-hidden bg-[#FCFBFB] border-b border-neutral-200 text-[#444444] text-[12px] font-medium hidden md:block transition-all duration-300 ease-in-out ${
+          isScrolled ? "max-h-0 opacity-0 border-transparent" : "max-h-12 opacity-100"
+        }`}
+      >
         <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-9">
             {/* Contact & Location Info */}
@@ -166,13 +178,17 @@ export default function Navbar() {
       {/* 2. MAIN NAVBAR: Completely separated */}
       <div className="w-full bg-white border-b border-neutral-200">
         <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 gap-4 flex-nowrap">
+          <div
+            className={`flex items-center justify-between gap-4 flex-nowrap transition-all duration-300 ease-in-out ${
+              isScrolled ? "h-16" : "h-20"
+            }`}
+          >
             
             {/* LEFT GROUP: Logo + Divider | + Social Icons (Strict Figma Dev Mode extraction) */}
             <div className="flex items-center gap-4 xl:gap-5 flex-shrink-0 flex-nowrap">
               {/* Brand Logo & Title */}
               <Link href="/" className="flex items-center gap-3.5 group flex-shrink-0 flex-nowrap">
-                <div className="relative w-12 h-12 flex-shrink-0">
+                <div className={`relative flex-shrink-0 transition-all duration-300 ${isScrolled ? "w-10 h-10" : "w-12 h-12"}`}>
                   <Image
                     src={img("logo", "/images/logo.png")}
                     alt="Uttara Adhunik Medical College Logo"
