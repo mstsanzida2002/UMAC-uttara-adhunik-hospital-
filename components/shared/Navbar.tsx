@@ -118,7 +118,11 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
+    <header
+      className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${
+        isScrolled ? "bg-transparent py-2 shadow-none" : "bg-white shadow-sm"
+      }`}
+    >
       {/* 1. TOP UTILITY BAR (matching Figma Frame 31 / Frame 5) - Strictly isolated */}
       <div
         className={`w-full overflow-hidden bg-[#FCFBFB] border-b border-neutral-200 text-[#444444] text-[12px] font-medium hidden md:block transition-all duration-300 ease-in-out ${
@@ -176,7 +180,13 @@ export default function Navbar() {
       </div>
 
       {/* 2. MAIN NAVBAR: Completely separated */}
-      <div className="w-full bg-white border-b border-neutral-200">
+      <div
+        className={`bg-white border border-neutral-200 transition-all duration-300 ease-in-out ${
+          isScrolled
+            ? "mx-4 sm:mx-6 lg:mx-10 rounded-xl border-[#018837] shadow-lg"
+            : "w-full border-b"
+        }`}
+      >
         <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
           <div
             className={`flex items-center justify-between gap-4 flex-nowrap transition-all duration-300 ease-in-out ${
