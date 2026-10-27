@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useSiteImages } from "@/hooks/useSiteContent";
+import { useSiteContent, useSiteImages } from "@/hooks/useSiteContent";
 
 interface SubOption {
   title: string;
@@ -75,6 +75,7 @@ const NAV_ITEMS: NavItem[] = [
 
 export default function Navbar() {
   const { img } = useSiteImages();
+  const { c } = useSiteContent();
   const pathname = usePathname();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -110,12 +111,12 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
-      {/* 1. TOP UTILITY BAR */}
-      <div className="w-full bg-[#F7F9F8] border-b border-neutral-200 text-[#444444] text-[12px] font-medium hidden md:block">
+      {/* 1. TOP UTILITY BAR (matching Figma Frame 31 / Frame 5) - Strictly isolated */}
+      <div className="w-full bg-[#FCFBFB] border-b border-neutral-200 text-[#444444] text-[12px] font-medium hidden md:block">
         <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-9">
             {/* Contact & Location Info */}
-            <div className="hidden">
+            <div className="flex items-center gap-6 text-neutral-600">
               <div className="flex items-center gap-1.5 hover:text-[#018837] transition cursor-pointer">
                 <svg className="w-3.5 h-3.5 text-[#018837]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -135,12 +136,12 @@ export default function Navbar() {
                 <svg className="w-3.5 h-3.5 text-[#018837]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+8801700220000">+880 1700-220000</a>
+                <a href={`tel:${c("college.phone", "+880 1700-220000").replace(/\s+/g, "")}`}>{c("college.phone", "+880 1700-220000")}</a>
               </div>
             </div>
 
             {/* Portal Quick Links: Strict plain text links, zero border/outline */}
-            <div className="mr-auto flex items-center gap-5">
+            <div className="flex items-center gap-5">
               <Link href="/admin/login" className="text-neutral-600 hover:text-[#018837] transition font-medium no-underline border-none outline-none focus:outline-none">
                 Student Portal
               </Link>
@@ -158,25 +159,6 @@ export default function Navbar() {
                 Contact Us
               </Link>
             </div>
-            <div className="flex items-center gap-2">
-              {[
-                { label: "Facebook", text: "f", href: "https://facebook.com" },
-                { label: "LinkedIn", text: "in", href: "https://linkedin.com" },
-                { label: "Twitter", text: "x", href: "https://twitter.com" },
-                { label: "YouTube", text: "▶", href: "https://youtube.com" },
-              ].map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={social.label}
-                  className="flex h-6 min-w-6 items-center justify-center rounded-full bg-neutral-200 px-1.5 text-[10px] font-bold text-neutral-700 transition hover:bg-[#018837] hover:text-white"
-                >
-                  {social.text}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>
@@ -184,7 +166,7 @@ export default function Navbar() {
       {/* 2. MAIN NAVBAR: Completely separated */}
       <div className="w-full bg-white border-b border-neutral-200">
         <div className="max-w-[1450px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 gap-4 rounded-b-2xl bg-white flex-nowrap">
+          <div className="flex items-center justify-between h-20 gap-4 flex-nowrap">
             
             {/* LEFT GROUP: Logo + Divider | + Social Icons (Strict Figma Dev Mode extraction) */}
             <div className="flex items-center gap-4 xl:gap-5 flex-shrink-0 flex-nowrap">
@@ -210,10 +192,10 @@ export default function Navbar() {
               </Link>
 
               {/* Vertical Divider Line after UAMC Logo */}
-              <div className="hidden" />
+              <div className="hidden xl:block h-7 w-[1px] bg-neutral-300 mx-1 flex-shrink-0" />
 
-              {/* Social links are shown in the utility bar. */}
-              <div className="hidden">
+              {/* Social Icons on the LEFT side immediately after divider */}
+              <div className="hidden xl:flex items-center gap-2 flex-shrink-0">
                 <a
                   href="https://facebook.com"
                   target="_blank"
