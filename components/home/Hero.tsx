@@ -115,7 +115,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = window.setInterval(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-    }, 6000);
+    }, 4500);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -134,14 +134,18 @@ export default function Hero() {
     <section className="relative min-h-[680px] lg:min-h-[750px] flex items-center justify-center overflow-hidden bg-black text-white">
       {/* 1. Background Image with Standard Dark Overlay (matching Figma Node 7:1367) */}
       <div className="absolute inset-0 z-0">
-        <Image
-          key={slide.imageKey}
-          src={img(slide.imageKey, "/images/hero-bg.jpg")}
-          alt="Uttara Adhunik Medical College Campus"
-          fill
-          priority
-          className="object-cover object-center transition-opacity duration-700"
-        />
+        {slides.map((slideItem, index) => (
+          <Image
+            key={slideItem.imageKey}
+            src={img(slideItem.imageKey, "/images/hero-bg.jpg")}
+            alt="Uttara Adhunik Medical College Campus"
+            fill
+            priority={index === 0}
+            className={`object-cover object-center transition-opacity duration-500 ease-in-out ${
+              currentSlide === index ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
         {/* Standard dark overlay replacing the purple gradient */}
         <div className="absolute inset-0 bg-black/55 backdrop-brightness-90" />
       </div>
