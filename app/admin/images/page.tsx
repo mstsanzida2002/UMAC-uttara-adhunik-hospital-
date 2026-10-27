@@ -32,9 +32,7 @@ type SiteImage = {
 const CATEGORIES = ['All', 'Hero', 'About', 'Principal', 'Facilities', 'Departments', 'Admission', 'General', 'Footer', 'Branding'];
 const HERO_SLOTS = [
   { key: 'hero-bg', label: 'Hero Background 1' },
-  { key: 'hero-bg-2', label: 'Hero Background 2' },
-  { key: 'hero-bg-3', label: 'Hero Background 3' },
-  { key: 'hero-bg-4', label: 'Hero Background 4' },
+  { key: 'hero-bg-4', label: 'Hero Background 2' },
 ] as const;
 
 export default function AdminImagesPage() {

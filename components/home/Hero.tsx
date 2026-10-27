@@ -33,56 +33,6 @@ const slides = [
   },
   {
     id: "02",
-    imageKey: "hero-bg-2",
-    tagline: "World-Class Academic Faculty & Clinical Laboratories",
-    title: "Nurturing Tomorrow's Compassionate Medical Leaders",
-    ctaText: "Explore Departments",
-    ctaLink: "/facilities?tab=departments",
-    degrees: {
-      category: "Academic Degrees",
-      items: [
-        {
-          title: "Pre-Clinical Sciences",
-          description:
-            "Comprehensive training in Anatomy, Physiology, and Biochemistry with modern histology and dissection labs.",
-          link: "/facilities?tab=departments",
-        },
-        {
-          title: "Para-Clinical Sciences",
-          description:
-            "Rigorous exposure in Pathology, Microbiology, Pharmacology, and Community Medicine diagnostics.",
-          link: "/facilities?tab=departments",
-        },
-      ],
-    },
-  },
-  {
-    id: "03",
-    imageKey: "hero-bg-3",
-    tagline: "500+ Bedded Tertiary Care Teaching Hospital",
-    title: "Comprehensive Patient Care & Real-World Bedside Training",
-    ctaText: "Hospital Facilities",
-    ctaLink: "/facilities",
-    degrees: {
-      category: "Clinical Care",
-      items: [
-        {
-          title: "24/7 Emergency & ICU Care",
-          description:
-            "Specialized acute emergency care units, CCU, NICU, and operation theaters providing active clinical training.",
-          link: "/facilities",
-        },
-        {
-          title: "Multidisciplinary Outpatient Care",
-          description:
-            "High-volume outpatient specialty clinics serving thousands of local and regional patients every day.",
-          link: "/facilities",
-        },
-      ],
-    },
-  },
-  {
-    id: "04",
     imageKey: "hero-bg-4",
     tagline: "BMDC Recognized & University of Dhaka Affiliated",
     title: "Global Accreditation, Standardized Curriculum & Research",
@@ -151,7 +101,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col justify-between min-h-[640px] lg:min-h-[700px]">
-        {/* 2. Top Slide Navigation Bar (PREV | 01 02 03 04 | NEXT) */}
+        {/* 2. Top Slide Navigation Bar (PREV | 01 02 | NEXT) */}
         <div className="w-full flex items-center justify-center pt-2 pb-6">
           <div className="inline-flex items-center gap-3 sm:gap-6 px-4 py-2 select-none">
             {/* PREV button */}
@@ -166,7 +116,7 @@ export default function Hero() {
             {/* Left Divider Line */}
             <div className="w-12 sm:w-24 md:w-32 h-[1px] bg-white/30" />
 
-            {/* Numbers: 01, 02, 03, 04 */}
+            {/* Numbers: 01, 02 */}
             <div className="flex items-center gap-2 sm:gap-4">
               {slides.map((s, index) => {
                 const isActive = currentSlide === index;
