@@ -21,6 +21,14 @@ const TABS = [
   { id: 'online', label: 'Online Registration', hash: 'registration' },
 ]
 
+type AdmissionInfo = {
+  id: string
+  title: string
+  slug: string
+  content: string
+  downloadUrl: string | null
+}
+
 function resolveTab(raw: string | null | undefined): string | null {
   if (!raw) return null
   const cleaned = raw.replace(/^[#?]/, '').trim().toLowerCase()
@@ -36,6 +44,19 @@ function AdmissionsInner() {
   const { img } = useSiteImages()
   const searchParams = useSearchParams()
   const [activeTab, setActiveTab] = useState<string>('procedure')
+  const [managedInfo, setManagedInfo] = useState<AdmissionInfo[]>([])
+
+  useEffect(() => {
+    fetch('/api/admin/admissions', { cache: 'no-store' })
+      .then(async (response) => {
+        if (!response.ok) throw new Error('Failed to load admission information')
+        return response.json()
+      })
+      .then(({ items }) => {
+        if (Array.isArray(items)) setManagedInfo(items)
+      })
+      .catch((error) => console.error('[admissions page]', error))
+  }, [])
 
   // Sync activeTab with URL (both searchParams and hash)
   useEffect(() => {
@@ -160,6 +181,23 @@ function AdmissionsInner() {
 
       {/* 3. DYNAMIC CONTENT AREA */}
       <main className="max-w-7xl mx-auto px-4 md:px-12 py-12 md:py-16">
+        {managedInfo.filter((item) => item.slug === activeTab).map((item) => (
+          <section key={item.id} className="mb-12 rounded-3xl border border-[#018837]/20 bg-[#E6F4EB] p-6 md:p-10">
+            <h2 className="text-2xl md:text-4xl font-serif font-bold text-[#018837]">{item.title}</h2>
+            <p className="mt-5 whitespace-pre-wrap text-base md:text-lg leading-relaxed text-[#444444]">{item.content}</p>
+            {item.downloadUrl && (
+              <a
+                href={item.downloadUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#018837] px-5 py-3 font-semibold text-white hover:bg-[#016f2c]"
+              >
+                <Download className="h-4 w-4" />
+                Open document or application link
+              </a>
+            )}
+          </section>
+        ))}
         {activeTab === 'procedure' && <ProcedureTabContent />}
         {activeTab === 'papers' && <PapersTabContent />}
         {activeTab === 'form' && <FormsTabContent />}
