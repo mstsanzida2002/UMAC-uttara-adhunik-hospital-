@@ -183,7 +183,7 @@ export default function Navbar() {
       <div
         className={`bg-white border border-neutral-200 transition-all duration-300 ease-in-out ${
           isScrolled
-            ? "mx-4 sm:mx-6 lg:mx-10 rounded-xl border-[#018837] shadow-lg"
+            ? "mx-4 sm:mx-6 lg:mx-10 rounded-xl border-2 border-[#018837] shadow-lg"
             : "w-full border-b"
         }`}
       >
@@ -336,20 +336,20 @@ export default function Navbar() {
                         onMouseLeave={handleMouseLeave}
                       >
                         {/* Container: sharp, dark translucent background with white/20 border */}
-                        <div className="bg-[#1E1E1E]/80 backdrop-blur-md rounded-none shadow-2xl border border-white/20 overflow-hidden">
+                        <div className="bg-white rounded-lg shadow-2xl border border-[#018837]/40 overflow-hidden">
                           <div className="flex flex-col">
                             {item.subOptions!.map((sub, idx) => (
                               <Link
                                 key={idx}
                                 href={sub.href}
-                                className="group/item flex items-center justify-between px-[16px] py-[15px] h-[54px] rounded-none transition-all duration-150 bg-transparent text-white hover:bg-[#FECD2F] hover:text-black border-b border-white/20 last:border-b-0 font-sans"
+                                className="group/item flex items-center justify-between px-[16px] py-[15px] h-[54px] rounded-none transition-all duration-150 bg-white text-neutral-800 hover:bg-[#E6F4EB] hover:text-[#018837] border-b border-neutral-100 last:border-b-0 font-sans"
                               >
                                 <span className="text-[15px] font-medium tracking-tight">
                                   {sub.title}
                                 </span>
                                 {/* Exact top-right diagonal arrow (↗) */}
                                 <svg
-                                  className="w-4 h-4 text-white/70 group-hover/item:text-black group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
+                                  className="w-4 h-4 text-neutral-400 group-hover/item:text-[#018837] group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition-all flex-shrink-0 ml-2"
                                   fill="none"
                                   stroke="currentColor"
                                   strokeWidth="2.5"
@@ -485,7 +485,7 @@ export default function Navbar() {
                         key={idx}
                         href={sub.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="flex items-center justify-between py-2 px-3 rounded-none text-sm font-medium text-neutral-600 hover:text-black hover:bg-[#FECD2F] transition border-b border-neutral-100 last:border-b-0 font-sans"
+                        className="flex items-center justify-between py-2 px-3 rounded-none text-sm font-medium text-neutral-600 hover:text-[#018837] hover:bg-[#E6F4EB] transition border-b border-neutral-100 last:border-b-0 font-sans"
                       >
                         <span>{sub.title}</span>
                         <svg className="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
