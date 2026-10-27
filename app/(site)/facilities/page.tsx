@@ -3,7 +3,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useSiteContent, useSiteImages } from '@/hooks/useSiteContent';
 import {
   Building2,
@@ -65,6 +65,7 @@ const TABS: TabItem[] = [
 
 function FacilitiesContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const initialTab = (searchParams.get('tab') as TabKey) || 'hospital-service';
   const [activeTab, setActiveTab] = useState<TabKey>(initialTab);
 
@@ -141,7 +142,10 @@ function FacilitiesContent() {
                 <button
                   key={tab.key}
                   type="button"
-                  onClick={() => setActiveTab(tab.key)}
+                  onClick={() => {
+                    setActiveTab(tab.key);
+                    router.push(`/facilities?tab=${tab.key}`, { scroll: false });
+                  }}
                   className={`px-4 sm:px-[26px] md:px-[30px] py-2 sm:py-3 md:py-[15px] rounded-[5px] text-[11px] sm:text-[12px] md:text-[13px] font-medium tracking-wide transition-all duration-200 cursor-pointer shadow-sm select-none ${
                     isActive
                       ? 'bg-[#018837] text-white shadow-md shadow-[#018837]/20 font-semibold ring-2 ring-[#018837]/30'

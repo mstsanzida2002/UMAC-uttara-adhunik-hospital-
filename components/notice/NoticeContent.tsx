@@ -165,6 +165,12 @@ function NoticeInner() {
   const [activeNoticeTab, setActiveNoticeTab] = useState<string>('general')
   const [activePubTab, setActivePubTab] = useState<string>('journal')
   const [searchQuery, setSearchQuery] = useState<string>('')
+  const [selectedNotice, setSelectedNotice] = useState<{
+    title: string
+    date: string
+    content: string
+    fileUrl: string | null
+  } | null>(null)
   const [noticeItems, setNoticeItems] = useState(() =>
     NOTICE_BOARD_ITEMS.map((item) => ({ ...item, id: String(item.id) }))
   )
@@ -177,6 +183,16 @@ function NoticeInner() {
       })
       .then(({ notices }) => {
         if (!Array.isArray(notices) || notices.length === 0) return
+        const selectedId = searchParams.get('notice')
+        const selected = notices.find((notice) => String(notice.id) === selectedId)
+        if (selected) {
+          setSelectedNotice({
+            title: selected.title,
+            date: selected.date,
+            content: selected.content || '',
+            fileUrl: selected.fileUrl || null,
+          })
+        }
         setNoticeItems(notices.map((notice) => {
           const parts = String(notice.date).split(' ')
           const category = String(notice.category).toLowerCase()
@@ -191,7 +207,7 @@ function NoticeInner() {
         }))
       })
       .catch((error) => console.error('[notice page]', error))
-  }, [])
+  }, [searchParams])
 
   // Sync category from URL param e.g. ?tab=admission, ?tab=job, etc.
   useEffect(() => {
@@ -361,6 +377,36 @@ function NoticeInner() {
                 className="w-full pl-10 pr-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-full focus:outline-none focus:border-[#018837] focus:bg-white transition"
               />
             </div>
+
+            {selectedNotice && (
+              <article className="rounded-2xl border border-[#018837]/25 bg-[#E6F4EB] p-5 md:p-7">
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-wide text-[#018837]">{selectedNotice.date}</p>
+                    <h3 className="mt-2 text-xl md:text-2xl font-serif font-bold text-[#222222]">{selectedNotice.title}</h3>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setSelectedNotice(null)}
+                    className="text-sm font-semibold text-[#018837] hover:underline"
+                  >
+                    Close
+                  </button>
+                </div>
+                <p className="mt-4 whitespace-pre-wrap leading-relaxed text-[#555555]">{selectedNotice.content}</p>
+                {selectedNotice.fileUrl && (
+                  <a
+                    href={selectedNotice.fileUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#018837] px-4 py-2 text-sm font-semibold text-white hover:bg-[#016f2c]"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download document
+                  </a>
+                )}
+              </article>
+            )}
           </div>
 
           {/* Tab Bar: "General Notice" (Active with green underline/border), "Admission Notice", "Reports", "Job Circular" */}

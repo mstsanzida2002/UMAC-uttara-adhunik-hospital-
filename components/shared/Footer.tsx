@@ -110,13 +110,19 @@ export default function Footer() {
               Our Campus
             </h4>
             <ul className="space-y-0">
-              {["Academic", "Athletics", "Campus life", "Research", "Academic Area"].map((item, idx) => (
+              {[
+                { name: "Academic", href: "/about" },
+                { name: "Athletics", href: "/facilities?tab=hostel" },
+                { name: "Campus life", href: "/facilities?tab=cafeteria" },
+                { name: "Research", href: "/notice?tab=publication" },
+                { name: "Academic Area", href: "/departments" },
+              ].map((item, idx) => (
                 <li key={idx}>
                   <Link
-                    href="/about"
+                    href={item.href}
                     className="text-[#737477] hover:text-[#890C25] transition-colors duration-200 block text-base font-normal leading-[25px] py-2"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}

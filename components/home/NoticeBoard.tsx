@@ -216,7 +216,7 @@ export default function NoticeBoard() {
               {filteredNotices.map((notice) => (
                 <Link
                   key={notice.id}
-                  href={`/notice/${notice.id}`}
+                  href={`/notice?notice=${encodeURIComponent(notice.id)}`}
                   className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl border border-[#E8E8F4] bg-white hover:border-[#018837]/40 hover:shadow-md transition group"
                 >
                   {/* Date badge */}
@@ -301,7 +301,7 @@ export default function NoticeBoard() {
               {filteredPublications.map((pub) => (
                 <Link
                   key={pub.id}
-                  href={`/notice/${pub.id}`}
+                  href="/notice?tab=publication"
                   className="flex items-center gap-4 p-3.5 sm:p-4 rounded-xl border border-[#E8E8F4] bg-white hover:border-[#018837]/40 hover:shadow-md transition group"
                 >
                   {/* Date badge */}
