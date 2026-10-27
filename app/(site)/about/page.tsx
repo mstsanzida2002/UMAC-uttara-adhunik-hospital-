@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useSiteContent, useSiteImages } from "@/hooks/useSiteContent";
 
 interface TabItem {
@@ -21,22 +22,24 @@ const ABOUT_TABS: TabItem[] = [
   { id: "gb", name: "GB Members" },
 ];
 
-export default function AboutPage() {
+function AboutPageContent() {
   const [activeTab, setActiveTab] = useState<string>("overview");
   const { img } = useSiteImages();
+  const router = useRouter();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const urlParams = new URLSearchParams(window.location.search);
-      const tabParam = urlParams.get("tab");
-      const hashParam = window.location.hash.replace("#", "");
-      const targetTab = tabParam || hashParam;
+    const tabParam = searchParams.get("tab");
+    const hashParam = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
+    const targetTab = tabParam || hashParam;
 
-      if (targetTab && ABOUT_TABS.some((t) => t.id === targetTab)) {
-        setActiveTab(targetTab);
-      }
+    if (targetTab && ABOUT_TABS.some((t) => t.id === targetTab)) {
+      setActiveTab(targetTab);
+    } else if (!targetTab) {
+      setActiveTab("overview");
     }
-  }, []);
+
+  }, [searchParams]);
 
   const currentTabObj = ABOUT_TABS.find((t) => t.id === activeTab) || ABOUT_TABS[0];
 
@@ -107,7 +110,10 @@ export default function AboutPage() {
                 <button
                   key={tab.id}
                   type="button"
-                  onClick={() => setActiveTab(tab.id)}
+                  onClick={() => {
+                    setActiveTab(tab.id);
+                    router.push(tab.id === "overview" ? "/about" : `/about?tab=${tab.id}`);
+                  }}
                   className={`px-4 sm:px-5 py-3 rounded-lg text-xs sm:text-sm font-medium transition-all duration-150 flex-shrink-0 font-sans cursor-pointer ${
                     isActive
                       ? "bg-[#018837] text-white shadow-md shadow-[#018837]/20"
@@ -137,6 +143,14 @@ export default function AboutPage() {
         {activeTab === "gb" && <GBMembersContent />}
       </main>
     </div>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white" />}>
+      <AboutPageContent />
+    </Suspense>
   );
 }
 
