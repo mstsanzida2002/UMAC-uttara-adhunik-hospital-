@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 interface NoticeItem {
@@ -126,10 +126,34 @@ const PUBLICATIONS_DATA: PublicationItem[] = [
 export default function NoticeBoard() {
   const [activeNoticeTab, setActiveNoticeTab] = useState<string>("all");
   const [activePubTab, setActivePubTab] = useState<string>("all");
+  const [notices, setNotices] = useState<NoticeItem[]>(NOTICES_DATA);
+
+  useEffect(() => {
+    fetch("/api/admin/notices", { cache: "no-store" })
+      .then(async (response) => {
+        if (!response.ok) throw new Error("Failed to load notices");
+        return response.json();
+      })
+      .then(({ notices: items }) => {
+        if (!Array.isArray(items) || items.length === 0) return;
+        setNotices(items.map((item) => {
+          const parts = String(item.date).split(" ");
+          return {
+            id: item.id,
+            day: parts[1]?.replace(",", "") || "",
+            month: `${parts[0] || ""} ${parts[2]?.slice(-2) || ""}`,
+            title: item.title,
+            time: "Official notice",
+            category: String(item.category).toLowerCase() === "admission" ? "admission" : String(item.category).toLowerCase() === "job" ? "job" : String(item.category).toLowerCase() === "reports" ? "reports" : "general",
+          };
+        }));
+      })
+      .catch((error) => console.error("[notice board]", error));
+  }, []);
 
   const filteredNotices = activeNoticeTab === "all"
-    ? NOTICES_DATA
-    : NOTICES_DATA.filter((n) => n.category === activeNoticeTab);
+    ? notices
+    : notices.filter((n) => n.category === activeNoticeTab);
 
   const filteredPublications = activePubTab === "all"
     ? PUBLICATIONS_DATA

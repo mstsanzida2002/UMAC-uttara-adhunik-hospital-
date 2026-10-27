@@ -165,6 +165,33 @@ function NoticeInner() {
   const [activeNoticeTab, setActiveNoticeTab] = useState<string>('general')
   const [activePubTab, setActivePubTab] = useState<string>('journal')
   const [searchQuery, setSearchQuery] = useState<string>('')
+  const [noticeItems, setNoticeItems] = useState(() =>
+    NOTICE_BOARD_ITEMS.map((item) => ({ ...item, id: String(item.id) }))
+  )
+
+  useEffect(() => {
+    fetch('/api/admin/notices', { cache: 'no-store' })
+      .then(async (response) => {
+        if (!response.ok) throw new Error('Failed to load notices')
+        return response.json()
+      })
+      .then(({ notices }) => {
+        if (!Array.isArray(notices) || notices.length === 0) return
+        setNoticeItems(notices.map((notice) => {
+          const parts = String(notice.date).split(' ')
+          const category = String(notice.category).toLowerCase()
+          return {
+            id: notice.id,
+            day: parts[1]?.replace(',', '') || '',
+            month: `${parts[0] || ''} ${parts[2]?.slice(-2) || ''}`,
+            title: notice.title,
+            time: 'Official notice',
+            category: category === 'admission' ? 'admission' : category === 'job' ? 'job' : category === 'reports' ? 'reports' : 'general',
+          }
+        }))
+      })
+      .catch((error) => console.error('[notice page]', error))
+  }, [])
 
   // Sync category from URL param e.g. ?tab=admission, ?tab=job, etc.
   useEffect(() => {
@@ -180,8 +207,8 @@ function NoticeInner() {
   }, [searchParams])
 
   // Filter notices based on active tab and search query
-  const filteredNotices = NOTICE_BOARD_ITEMS.filter((item) => {
-    const matchesCategory = activeNoticeTab === 'general' || item.category === activeNoticeTab || true
+  const filteredNotices = noticeItems.filter((item) => {
+    const matchesCategory = activeNoticeTab === 'general' || item.category === activeNoticeTab
     const matchesSearch =
       searchQuery.trim() === '' ||
       item.title.toLowerCase().includes(searchQuery.toLowerCase())
