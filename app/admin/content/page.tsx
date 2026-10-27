@@ -21,38 +21,6 @@ type ContentItem = {
 
 type SectionGroup = { [section: string]: ContentItem[] };
 
-// Only these keys from "text" type will be shown (contact/info fields)
-const IMPORTANT_TEXT_KEYS = new Set([
-  'college.phone',
-  'college.email',
-  'college.address',
-  'college.location',
-  'college.established',
-  'college.affiliation',
-  'college.recognition',
-  'college.total_beds',
-  'college.total_departments',
-  'metrics.stat1.value',
-  'metrics.stat1.label',
-  'metrics.stat2.value',
-  'metrics.stat2.label',
-  'metrics.stat3.value',
-  'metrics.stat3.label',
-  'finddept.dept_count',
-  'finddept.featured_dept',
-  'finddept.popular_tag1',
-  'finddept.popular_tag2',
-  'finddept.popular_tag3',
-  'about.principal_name',
-  'about.principal_title',
-  'about.principal_heading',
-]);
-
-// Filter: only textarea fields OR important contact/info text fields
-function isImportant(item: ContentItem) {
-  return item.type === 'textarea' || IMPORTANT_TEXT_KEYS.has(item.key);
-}
-
 const SECTION_ICONS: Record<string, string> = {
   College: '🏫',
   About: '📖',
@@ -69,30 +37,26 @@ export default function AdminContentPage() {
   const [saving, setSaving] = useState<string | null>(null);
   const [dirty, setDirty] = useState<Record<string, string>>({});
   const [toast, setToast] = useState<{ type: 'success' | 'error'; msg: string } | null>(null);
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+  const [expandedSection, setExpandedSection] = useState<string | null>(null);
 
   const fetchContent = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/content');
       const data = await res.json();
-      const all: ContentItem[] = (data.items || []).filter(isImportant);
+      const all: ContentItem[] = data.items || [];
 
       const groups: SectionGroup = {};
       for (const item of all) {
         if (!groups[item.section]) groups[item.section] = [];
         groups[item.section].push(item);
       }
-      // Remove empty sections (e.g. Hero has no textarea/important fields left)
       const nonEmpty: SectionGroup = {};
       for (const [sec, items] of Object.entries(groups)) {
         if (items.length > 0) nonEmpty[sec] = items;
       }
       setGrouped(nonEmpty);
-
-      const exp: Record<string, boolean> = {};
-      for (const sec of Object.keys(nonEmpty)) exp[sec] = true;
-      setExpanded(exp);
+      setExpandedSection(null);
     } catch {
       showToast('error', 'Failed to load content');
     } finally {
@@ -252,17 +216,14 @@ export default function AdminContentPage() {
             </div>
           ) : (
             Object.entries(grouped).map(([section, sectionItems]) => {
-              const isOpen = expanded[section] ?? true;
+              const isOpen = expandedSection === section;
               const dirty_section = hasDirty(section);
 
               return (
                 <div key={section} className="bg-white rounded-2xl border border-emerald-100/70 shadow-sm overflow-hidden">
 
                   {/* Section header */}
-                  <button
-                    onClick={() => setExpanded(prev => ({ ...prev, [section]: !prev[section] }))}
-                    className="w-full flex items-center justify-between px-6 py-4 hover:bg-emerald-50/30 transition-colors"
-                  >
+                  <div className="w-full flex items-center justify-between px-6 py-4 hover:bg-emerald-50/30 transition-colors">
                     <div className="flex items-center gap-3">
                       <span className="text-xl">{SECTION_ICONS[section] || '📝'}</span>
                       <div className="text-left">
@@ -274,17 +235,25 @@ export default function AdminContentPage() {
                       )}
                     </div>
                     <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setExpandedSection(isOpen ? null : section)}
+                        className="inline-flex items-center gap-2 px-3.5 py-2 bg-[#018837] text-white text-xs font-semibold rounded-lg hover:bg-[#016F2C] transition-colors shadow-sm"
+                      >
+                        {isOpen ? 'Close editor' : 'Edit section'}
+                        {isOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                      </button>
                       {dirty_section && (
                         <button
+                          type="button"
                           onClick={e => { e.stopPropagation(); handleSaveAll(section); }}
                           className="flex items-center gap-1.5 px-3.5 py-1.5 bg-[#018837] text-white text-xs font-semibold rounded-lg hover:bg-[#016F2C] transition-colors shadow-sm"
                         >
                           <Save className="w-3.5 h-3.5" />Save All
                         </button>
                       )}
-                      {isOpen ? <ChevronUp className="w-4 h-4 text-gray-400" /> : <ChevronDown className="w-4 h-4 text-gray-400" />}
                     </div>
-                  </button>
+                  </div>
 
                   {/* Fields */}
                   {isOpen && (
