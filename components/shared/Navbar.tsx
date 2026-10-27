@@ -41,11 +41,11 @@ const NAV_ITEMS: NavItem[] = [
     href: "/facilities",
     subOptions: [
       { title: "Hospital Service", href: "/facilities?tab=hospital-service" },
-      { title: "Departments", href: "/departments" },
+      { title: "Departments", href: "/facilities?tab=departments" },
       { title: "Library", href: "/facilities?tab=library" },
       { title: "Medical Education Unit", href: "/facilities?tab=meu" },
       { title: "Training", href: "/facilities?tab=training" },
-      { title: "Publications", href: "/notice?tab=publication" },
+      { title: "Publications", href: "/facilities?tab=publications" },
       { title: "Seminar", href: "/facilities?tab=seminar" },
       { title: "Hostel", href: "/facilities?tab=hostel" },
       { title: "Laboratory", href: "/facilities?tab=laboratory" },
