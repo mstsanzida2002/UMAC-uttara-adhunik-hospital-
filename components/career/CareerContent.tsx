@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useSiteImages } from '@/hooks/useSiteImages'
@@ -17,7 +17,16 @@ import {
 } from 'lucide-react'
 
 // Current Job Circulars & Faculty Openings data
-const CAREER_OPENINGS = [
+type CareerOpening = {
+  id: string | number
+  title: string
+  department: string
+  type: string
+  deadline: string
+  requirements: string[]
+}
+
+const DEFAULT_CAREER_OPENINGS: CareerOpening[] = [
   {
     id: 1,
     title: 'Professor / Associate Professor',
@@ -58,6 +67,7 @@ const CAREER_OPENINGS = [
 
 export default function CareerContent() {
   const { img } = useSiteImages();
+  const [careerOpenings, setCareerOpenings] = useState(DEFAULT_CAREER_OPENINGS)
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -69,6 +79,33 @@ export default function CareerContent() {
 
   const [submitted, setSubmitted] = useState(false)
   const [selectedJob, setSelectedJob] = useState<string | null>(null)
+
+  useEffect(() => {
+    fetch('/api/admin/jobs', { cache: 'no-store' })
+      .then(async (response) => {
+        if (!response.ok) throw new Error('Failed to load job postings')
+        return response.json()
+      })
+      .then(({ jobs }) => {
+        if (!Array.isArray(jobs) || jobs.length === 0) return
+        setCareerOpenings(jobs.filter((job: { isPublished: boolean }) => job.isPublished).map((job: {
+          id: string
+          title: string
+          department: string
+          type: string
+          deadline: string
+          requirements: string
+        }) => ({
+          id: job.id,
+          title: job.title,
+          department: job.department,
+          type: job.type,
+          deadline: job.deadline,
+          requirements: job.requirements.split(/\r?\n/).map((item) => item.trim()).filter(Boolean),
+        })))
+      })
+      .catch((error) => console.error('[career page]', error))
+  }, [])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -171,7 +208,7 @@ export default function CareerContent() {
 
         {/* 3-Column Job Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {CAREER_OPENINGS.map((job) => (
+          {careerOpenings.map((job) => (
             <div
               key={job.id}
               className={`rounded-2xl p-6 border transition flex flex-col justify-between ${
