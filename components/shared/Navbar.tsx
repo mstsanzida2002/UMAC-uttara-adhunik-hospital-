@@ -364,7 +364,7 @@ export default function Navbar() {
                     onSubmit={(e) => {
                       e.preventDefault();
                       if (searchQuery.trim()) {
-                        window.location.href = `/departments?search=${encodeURIComponent(searchQuery)}`;
+                        window.location.href = `/facilities?tab=departments`;
                       }
                     }}
                     className="flex items-center gap-2"

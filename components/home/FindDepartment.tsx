@@ -57,7 +57,7 @@ export default function FindDepartment() {
                   className="w-full bg-transparent text-sm sm:text-base text-neutral-800 placeholder-[#9191A6] focus:outline-none px-2 py-2"
                 />
                 <Link
-                  href={`/departments?search=${encodeURIComponent(searchQuery)}`}
+                  href="/facilities?tab=departments"
                   className="px-5 py-2.5 rounded-xl bg-[#018837] text-white font-semibold text-sm hover:bg-[#016f2c] transition flex-shrink-0 shadow-sm"
                 >
                   Search
@@ -101,7 +101,7 @@ export default function FindDepartment() {
                 </div>
               </div>
               <Link
-                href="/departments"
+                href="/facilities?tab=departments"
                 className="w-10 h-10 rounded-full bg-[#018837] text-white flex items-center justify-center flex-shrink-0 group-hover:bg-[#016f2c] group-hover:scale-105 transition shadow-sm"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">

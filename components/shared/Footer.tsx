@@ -115,7 +115,7 @@ export default function Footer() {
                 { name: "Athletics", href: "/facilities?tab=hostel" },
                 { name: "Campus life", href: "/facilities?tab=cafeteria" },
                 { name: "Research", href: "/notice?tab=publication" },
-                { name: "Academic Area", href: "/departments" },
+                { name: "Academic Area", href: "/facilities?tab=departments" },
               ].map((item, idx) => (
                 <li key={idx}>
                   <Link
@@ -139,7 +139,7 @@ export default function Footer() {
                 { name: "About", href: "/about" },
                 { name: "Tution Fee", href: "/admissions" },
                 { name: "Alumni", href: "/about" },
-                { name: "Faculty Staff", href: "/departments" },
+                { name: "Faculty Staff", href: "/facilities?tab=departments" },
                 { name: "Event", href: "/notice" },
               ].map((item, idx) => (
                 <li key={idx}>

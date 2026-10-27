@@ -11,7 +11,7 @@ const slides = [
     tagline: "Shaping the Future of Healthcare, One Student at a Time",
     title: "Excellence in Medical Education, Innovation in Healthcare",
     ctaText: "View Our Program",
-    ctaLink: "/departments",
+    ctaLink: "/facilities?tab=departments",
     degrees: {
       category: "MBBS Degrees",
       items: [
@@ -19,13 +19,13 @@ const slides = [
           title: "Bachelor of Medicine",
           description:
             "A degree focusing on the study of human biology, anatomy, and pathology to build a strong medical foundation.",
-          link: "/departments",
+          link: "/facilities?tab=departments",
         },
         {
           title: "Bachelor of Surgery",
           description:
             "A degree emphasizing clinical and surgical skills for diagnosing and treating patients effectively.",
-          link: "/departments",
+          link: "/facilities?tab=departments",
         },
       ],
     },
@@ -35,7 +35,7 @@ const slides = [
     tagline: "World-Class Academic Faculty & Clinical Laboratories",
     title: "Nurturing Tomorrow's Compassionate Medical Leaders",
     ctaText: "Explore Departments",
-    ctaLink: "/departments",
+    ctaLink: "/facilities?tab=departments",
     degrees: {
       category: "Academic Degrees",
       items: [
@@ -43,13 +43,13 @@ const slides = [
           title: "Pre-Clinical Sciences",
           description:
             "Comprehensive training in Anatomy, Physiology, and Biochemistry with modern histology and dissection labs.",
-          link: "/departments",
+          link: "/facilities?tab=departments",
         },
         {
           title: "Para-Clinical Sciences",
           description:
             "Rigorous exposure in Pathology, Microbiology, Pharmacology, and Community Medicine diagnostics.",
-          link: "/departments",
+          link: "/facilities?tab=departments",
         },
       ],
     },

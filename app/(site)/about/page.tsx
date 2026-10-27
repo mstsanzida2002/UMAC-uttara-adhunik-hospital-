@@ -303,7 +303,7 @@ function OverviewContent() {
               {/* View Our Program CTA */}
               <div className="mt-8">
                 <Link
-                  href="/departments"
+                  href="/facilities?tab=departments"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#018837] text-white font-semibold text-base shadow-lg shadow-[#018837]/20 hover:bg-[#016f2c] transition-all group font-sans"
                 >
                   <span>View Our Program</span>
