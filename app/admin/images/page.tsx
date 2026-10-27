@@ -18,6 +18,7 @@ import {
   RefreshCw,
   ArrowUpRight,
 } from 'lucide-react';
+import { DEFAULT_IMAGES } from '@/context/SiteDataContext';
 
 type SiteImage = {
   id: string;
@@ -29,6 +30,12 @@ type SiteImage = {
 };
 
 const CATEGORIES = ['All', 'Hero', 'About', 'Principal', 'Facilities', 'Departments', 'Admission', 'General', 'Footer', 'Branding'];
+const HERO_SLOTS = [
+  { key: 'hero-bg', label: 'Hero Background 1' },
+  { key: 'hero-bg-2', label: 'Hero Background 2' },
+  { key: 'hero-bg-3', label: 'Hero Background 3' },
+  { key: 'hero-bg-4', label: 'Hero Background 4' },
+] as const;
 
 export default function AdminImagesPage() {
   const [images, setImages] = useState<SiteImage[]>([]);
@@ -43,7 +50,18 @@ export default function AdminImagesPage() {
     try {
       const res = await fetch('/api/admin/images');
       const data = await res.json();
-      setImages(data.images || []);
+      const managedImages: SiteImage[] = data.images || [];
+      const heroImages: SiteImage[] = HERO_SLOTS
+        .filter(({ key }) => !managedImages.some((image) => image.key === key))
+        .map(({ key, label }) => ({
+          id: `default-${key}`,
+          key,
+          label,
+          category: 'Hero',
+          url: DEFAULT_IMAGES[key],
+          updatedAt: '',
+        }));
+      setImages([...managedImages, ...heroImages]);
     } catch {
       showToast('error', 'Failed to load images');
     } finally {

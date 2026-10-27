@@ -8,6 +8,9 @@ export type ImageMap = Record<string, string>;
 // Default image mappings for every key known in the system
 export const DEFAULT_IMAGES: ImageMap = {
   "hero-bg": "/images/hero-bg.jpg",
+  "hero-bg-2": "/images/about-banner.jpg",
+  "hero-bg-3": "/images/finddept-bg.jpg",
+  "hero-bg-4": "/images/admission-bg.jpg",
   "about-1": "/images/about-1.jpg",
   "about-2": "/images/about-2.jpg",
   "about-banner": "/images/about-banner.jpg",

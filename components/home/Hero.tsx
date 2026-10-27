@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useSiteImages } from "@/hooks/useSiteImages";
@@ -8,6 +8,7 @@ import { useSiteImages } from "@/hooks/useSiteImages";
 const slides = [
   {
     id: "01",
+    imageKey: "hero-bg",
     tagline: "Shaping the Future of Healthcare, One Student at a Time",
     title: "Excellence in Medical Education, Innovation in Healthcare",
     ctaText: "View Our Program",
@@ -32,6 +33,7 @@ const slides = [
   },
   {
     id: "02",
+    imageKey: "hero-bg-2",
     tagline: "World-Class Academic Faculty & Clinical Laboratories",
     title: "Nurturing Tomorrow's Compassionate Medical Leaders",
     ctaText: "Explore Departments",
@@ -56,6 +58,7 @@ const slides = [
   },
   {
     id: "03",
+    imageKey: "hero-bg-3",
     tagline: "500+ Bedded Tertiary Care Teaching Hospital",
     title: "Comprehensive Patient Care & Real-World Bedside Training",
     ctaText: "Hospital Facilities",
@@ -80,6 +83,7 @@ const slides = [
   },
   {
     id: "04",
+    imageKey: "hero-bg-4",
     tagline: "BMDC Recognized & University of Dhaka Affiliated",
     title: "Global Accreditation, Standardized Curriculum & Research",
     ctaText: "Admission Guidelines",
@@ -102,35 +106,19 @@ const slides = [
       ],
     },
   },
-  {
-    id: "05",
-    tagline: "Vibrant Campus Life in the Heart of Uttara Model Town",
-    title: "Modern Residential Facilities, Culture & Sports",
-    ctaText: "Discover Campus",
-    ctaLink: "/facilities",
-    degrees: {
-      category: "Campus Life",
-      items: [
-        {
-          title: "Hostels & Digital Library",
-          description:
-            "Secure on-campus student residences with high-speed internet, e-library subscriptions, and reading halls.",
-          link: "/facilities",
-        },
-        {
-          title: "Student Societies & Welfare",
-          description:
-            "Active medical clubs, debating teams, cultural celebrations, and community medical relief outreach.",
-          link: "/about",
-        },
-      ],
-    },
-  },
 ];
 
 export default function Hero() {
   const { img } = useSiteImages();
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 6000);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -147,18 +135,19 @@ export default function Hero() {
       {/* 1. Background Image with Standard Dark Overlay (matching Figma Node 7:1367) */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={img("hero-bg", "/images/hero-bg.jpg")}
+          key={slide.imageKey}
+          src={img(slide.imageKey, "/images/hero-bg.jpg")}
           alt="Uttara Adhunik Medical College Campus"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center transition-opacity duration-700"
         />
         {/* Standard dark overlay replacing the purple gradient */}
         <div className="absolute inset-0 bg-black/55 backdrop-brightness-90" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col justify-between min-h-[640px] lg:min-h-[700px]">
-        {/* 2. Top Slide Navigation Bar (PREV | 01 02 03 04 05 | NEXT) */}
+        {/* 2. Top Slide Navigation Bar (PREV | 01 02 03 04 | NEXT) */}
         <div className="w-full flex items-center justify-center pt-2 pb-6">
           <div className="inline-flex items-center gap-3 sm:gap-6 px-4 py-2 select-none">
             {/* PREV button */}
@@ -173,7 +162,7 @@ export default function Hero() {
             {/* Left Divider Line */}
             <div className="w-12 sm:w-24 md:w-32 h-[1px] bg-white/30" />
 
-            {/* Numbers: 01, 02, 03, 04, 05 */}
+            {/* Numbers: 01, 02, 03, 04 */}
             <div className="flex items-center gap-2 sm:gap-4">
               {slides.map((s, index) => {
                 const isActive = currentSlide === index;
